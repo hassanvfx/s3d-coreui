@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "S3DCoreUI",
+    platforms: [
+           .iOS(.v15), // Set the minimum iOS version to 16
+           .macOS(.v10_15)
+       ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(

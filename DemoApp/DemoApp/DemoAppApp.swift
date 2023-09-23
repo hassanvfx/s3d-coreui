@@ -10,8 +10,8 @@ import S3DCoreUI
 
 class Model:ObservableObject{
     init(){
-        let framework = S3DCoreUI()
-        framework.test()
+//        let framework = S3DCoreUI()
+//        framework.test()
     }
 }
 
