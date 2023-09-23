@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwiftUI
 extension UIColor {
-    func contrast() -> UIColor {
+    public var contrastForeground: UIColor {
         // Get the components of the color (RGB)
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -25,5 +26,10 @@ extension UIColor {
         } else {
             return UIColor.white
         }
+    }
+}
+extension Color{
+    public var contrastForeground:Color{
+        Color(UIColor(self).contrastForeground)
     }
 }

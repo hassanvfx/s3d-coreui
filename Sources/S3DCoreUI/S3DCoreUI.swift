@@ -2,11 +2,11 @@ import UIKit
 import SwiftUI
 
 public struct Style {
-    public var padding=8
-    public var cornerRadius=12
+    public var padding:Double=8
+    public var cornerRadius:Double=12
     public var lightPalette=Palette(background: .white)
     public var darkPalette=Palette(background:.black)
-    public init(padding: Int = 8, cornerRadius: Int = 12, lightPalette: Palette = Palette(background: .white), darkPalette: Palette = Palette(background:.black)) {
+    public init(padding: Double = 8, cornerRadius: Double = 12, lightPalette: Palette = Palette(background: .white), darkPalette: Palette = Palette(background:.black)) {
         self.padding = padding
         self.cornerRadius = cornerRadius
         self.lightPalette = lightPalette

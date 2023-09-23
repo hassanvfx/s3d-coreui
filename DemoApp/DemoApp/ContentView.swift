@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import S3DCoreUI
 
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
-            .padding()
+            .padding(Style.spec.padding)
+            .background(Style.spec.palette.background)
+            .foregroundColor(Style.spec.palette.background.contrastForeground)
+            .cornerRadius(Style.spec.cornerRadius)
     }
 }
 
