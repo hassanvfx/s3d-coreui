@@ -30,7 +30,7 @@ public struct Palette{
     }
 }
 extension Style {
-    static var spec = Style()
+    public static var spec = Style()
 }
 extension Style {
     public var isDarkMode: Bool {
