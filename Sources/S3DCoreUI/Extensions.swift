@@ -7,8 +7,8 @@
 
 import UIKit
 import SwiftUI
-extension UIColor {
-    public var contrastForeground: UIColor {
+public extension UIColor {
+     var contrastForeground: UIColor {
         // Get the components of the color (RGB)
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -28,8 +28,26 @@ extension UIColor {
         }
     }
 }
-extension Color{
-    public var contrastForeground:Color{
+public extension Color{
+     var contrastForeground:Color{
         Color(UIColor(self).contrastForeground)
+    }
+}
+
+
+public extension UIApplication {
+    var rootViewController: UIViewController? {
+        return windows.first?.rootViewController
+    }
+    
+    static func presentAlert(title: String, message: String) {
+        guard let rootViewController = UIApplication.shared.rootViewController else {
+            return
+        }
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        rootViewController.present(alertController, animated: true, completion: nil)
     }
 }
