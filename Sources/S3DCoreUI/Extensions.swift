@@ -39,8 +39,10 @@ public extension UIApplication {
     var rootViewController: UIViewController? {
         return windows.first?.rootViewController
     }
-    
-    static func presentAlert(title: String, message: String) {
+}
+
+extension UIApplication {
+    public static func presentAlert(title: String, message: String) {
         guard let rootViewController = UIApplication.shared.rootViewController else {
             return
         }
